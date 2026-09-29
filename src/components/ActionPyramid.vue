@@ -1,11 +1,14 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+// import { ref } from 'vue'
+import { store } from '../store.js';
 
 import ActionPyramid from '../models/ActionPyramid.ts';
 import Actions from './Actions.vue';
 
 
-let actionPyramid = ref(new ActionPyramid());
+// let actionPyramid = ref(new ActionPyramid());
+
+store.pyramid = new ActionPyramid();
 
 </script>
 <style>
@@ -105,17 +108,19 @@ let actionPyramid = ref(new ActionPyramid());
 
 <template>
   <section id="center">
-
+    <button type="button" class="counter" @click="store.resetGame()">
+      New Game
+    </button>
     <div class="grid">
         <div class="row row-1">
             <div class="column">
 
                 <div class="action-tile"
-                :class="{ 'active-tile': actionPyramid.getCurrentRow() === 0 && actionPyramid.getCurrentCol() === 0 }"
+                :class="{ 'active-tile': store.pyramid.getCurrentRow() === 0 && store.pyramid.getCurrentCol() === 0 }"
                 
                 >
-                    <img :src="actionPyramid.getPyramid()[0][0].image" 
-                        :title="actionPyramid.getPyramid()[0][0].title"
+                    <img :src="store.pyramid.getPyramid()[0][0].image" 
+                        :title="store.pyramid.getPyramid()[0][0].title"
                     />
                 </div>
             </div>
@@ -125,21 +130,21 @@ let actionPyramid = ref(new ActionPyramid());
             <div class="column column--left-edge">
                 
                 <div class="action-tile"
-                :class="{ 'active-tile': actionPyramid.getCurrentRow() === 1 && actionPyramid.getCurrentCol() === 0 }"
+                :class="{ 'active-tile': store.pyramid.getCurrentRow() === 1 && store.pyramid.getCurrentCol() === 0 }"
                 
                 >
-                    <img :src="actionPyramid.getPyramid()[1][0].image" 
-                        :title="actionPyramid.getPyramid()[1][0].title"
+                    <img :src="store.pyramid.getPyramid()[1][0].image" 
+                        :title="store.pyramid.getPyramid()[1][0].title"
                     />
                 </div>
             </div>
             <div class="column column--right-edge">
 
                 <div class="action-tile"
-                    :class="{ 'active-tile': actionPyramid.getCurrentRow() === 1 && actionPyramid.getCurrentCol() === 1 }"
+                    :class="{ 'active-tile': store.pyramid.getCurrentRow() === 1 && store.pyramid.getCurrentCol() === 1 }"
                 >
-                    <img :src="actionPyramid.getPyramid()[1][1].image" 
-                        :title="actionPyramid.getPyramid()[1][1].title"
+                    <img :src="store.pyramid.getPyramid()[1][1].image" 
+                        :title="store.pyramid.getPyramid()[1][1].title"
                     />
                 </div>
             </div>
@@ -149,29 +154,29 @@ let actionPyramid = ref(new ActionPyramid());
             <div class="column column--left-edge">
                 <div 
                     class="action-tile"
-                    :class="{ 'active-tile': actionPyramid.getCurrentRow() === 2 && actionPyramid.getCurrentCol() === 0 }"
+                    :class="{ 'active-tile': store.pyramid.getCurrentRow() === 2 && store.pyramid.getCurrentCol() === 0 }"
                 >
-                    <img :src="actionPyramid.getPyramid()[2][0].image" 
-                        :title="actionPyramid.getPyramid()[2][0].title"
+                    <img :src="store.pyramid.getPyramid()[2][0].image" 
+                        :title="store.pyramid.getPyramid()[2][0].title"
                     />
                 </div>
             </div>
             <div class="column">
 
                 <div class="action-tile"
-                    :class="{ 'active-tile': actionPyramid.getCurrentRow() === 2 && actionPyramid.getCurrentCol() === 1 }"
+                    :class="{ 'active-tile': store.pyramid.getCurrentRow() === 2 && store.pyramid.getCurrentCol() === 1 }"
                 >
-                    <img :src="actionPyramid.getPyramid()[2][1].image" 
-                        :title="actionPyramid.getPyramid()[2][1].title"
+                    <img :src="store.pyramid.getPyramid()[2][1].image" 
+                        :title="store.pyramid.getPyramid()[2][1].title"
                     />
                 </div>
             </div>
             <div class="column column--right-edge">
                 <div class="action-tile"
-                    :class="{ 'active-tile': actionPyramid.getCurrentRow() === 2 && actionPyramid.getCurrentCol() === 2 }"
+                    :class="{ 'active-tile': store.pyramid.getCurrentRow() === 2 && store.pyramid.getCurrentCol() === 2 }"
                 >
-                    <img :src="actionPyramid.getPyramid()[2][2].image" 
-                        :title="actionPyramid.getPyramid()[2][2].title"
+                    <img :src="store.pyramid.getPyramid()[2][2].image" 
+                        :title="store.pyramid.getPyramid()[2][2].title"
                     />
                 </div>
             </div>
@@ -180,20 +185,20 @@ let actionPyramid = ref(new ActionPyramid());
             <div class="column column--left-edge">
                 <div 
                     class="action-tile"
-                    :class="{ 'active-tile': actionPyramid.getCurrentRow() === 3 && actionPyramid.getCurrentCol() === 0 }"
+                    :class="{ 'active-tile': store.pyramid.getCurrentRow() === 3 && store.pyramid.getCurrentCol() === 0 }"
                 >
-                     <img :src="actionPyramid.getPyramid()[3][0].image" 
-                            :title="actionPyramid.getPyramid()[3][0].title"
+                     <img :src="store.pyramid.getPyramid()[3][0].image" 
+                            :title="store.pyramid.getPyramid()[3][0].title"
                             />
                 </div>
             </div>
             <div class="column">
 
                 <div class="action-tile"
-                    :class="{ 'active-tile': actionPyramid.getCurrentRow() === 3 && actionPyramid.getCurrentCol() === 1 }" 
+                    :class="{ 'active-tile': store.pyramid.getCurrentRow() === 3 && store.pyramid.getCurrentCol() === 1 }" 
                 >
-                    <img :src="actionPyramid.getPyramid()[3][1].image" 
-                        :title="actionPyramid.getPyramid()[3][1].title"
+                    <img :src="store.pyramid.getPyramid()[3][1].image" 
+                        :title="store.pyramid.getPyramid()[3][1].title"
                     />
                 </div>
             </div>
@@ -201,20 +206,20 @@ let actionPyramid = ref(new ActionPyramid());
             <div class="column">
 
                 <div class="action-tile"
-                :class="{ 'active-tile': actionPyramid.getCurrentRow() === 3 && actionPyramid.getCurrentCol() === 2 }"
+                :class="{ 'active-tile': store.pyramid.getCurrentRow() === 3 && store.pyramid.getCurrentCol() === 2 }"
                 >
-                    <img :src="actionPyramid.getPyramid()[3][2].image" 
-                        :title="actionPyramid.getPyramid()[3][2].title"
+                    <img :src="store.pyramid.getPyramid()[3][2].image" 
+                        :title="store.pyramid.getPyramid()[3][2].title"
                     />
                 </div>
             </div>
             <div class="column column--right-edge">
 
                 <div class="action-tile"
-                    :class="{ 'active-tile': actionPyramid.getCurrentRow() === 3 && actionPyramid.getCurrentCol() === 3 }"
+                    :class="{ 'active-tile': store.pyramid.getCurrentRow() === 3 && store.pyramid.getCurrentCol() === 3 }"
                 >
-                    <img :src="actionPyramid.getPyramid()[3][3].image" 
-                        :title="actionPyramid.getPyramid()[3][3].title"
+                    <img :src="store.pyramid.getPyramid()[3][3].image" 
+                        :title="store.pyramid.getPyramid()[3][3].title"
                     />
                 </div>
             </div>
@@ -222,18 +227,18 @@ let actionPyramid = ref(new ActionPyramid());
     </div>
 
 
+    Turn {{ store.turnNumber }} of 16
 
 
 
-
-    <button type="button" class="counter" @click="actionPyramid.navigate()">
+    <button 
+        v-if="store.turnNumber < 16"
+        type="button" class="counter" @click="store.takeTurn()">
       Take turn
     </button>
 
 
-    <button type="button" class="counter" @click="actionPyramid.reset()">
-      reset
-    </button>
+
 
     <Actions />
   </section>
