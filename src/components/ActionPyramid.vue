@@ -1,14 +1,8 @@
 <script setup lang="ts">
 // import { ref } from 'vue'
 import { store } from '../store.js';
-
-import ActionPyramid from '../models/ActionPyramid.ts';
 import Actions from './Actions.vue';
 
-
-// let actionPyramid = ref(new ActionPyramid());
-
-store.pyramid = new ActionPyramid();
 
 </script>
 <style>
@@ -76,11 +70,15 @@ store.pyramid = new ActionPyramid();
         color: #000;
         display: flex;
         font-size: 12px;
-        width: 120px;
+        width: 80px;
         /* height: 52px; */
         justify-content: center;
         line-height: 1;
         box-shadow: 2px 2px 3px rgba(50,50,50,0.7);
+
+        @media (min-width: 700px) {
+            width: 120px;
+        }
     }
 
     .action-tile img {
@@ -108,9 +106,6 @@ store.pyramid = new ActionPyramid();
 
 <template>
   <section id="center">
-    <button type="button" class="counter" @click="store.resetGame()">
-      New Game
-    </button>
     <div class="grid">
         <div class="row row-1">
             <div class="column">
@@ -228,14 +223,6 @@ store.pyramid = new ActionPyramid();
 
 
     Turn {{ store.turnNumber }} of 16
-
-
-
-    <button 
-        v-if="store.turnNumber < 16"
-        type="button" class="counter" @click="store.takeTurn()">
-      Take turn
-    </button>
 
 
 

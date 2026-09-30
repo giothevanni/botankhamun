@@ -55,23 +55,23 @@
                     Horus Bonuses remain unchanged, Botakhamun receives
                     a bonus from the chart below, based on the position of
                     the Horus Bonus tile.
-
-
-                    <table>
-                        <tr>
-                            <td>One or Two</td>
-                            <td>1 Scribe</td>
-                        </tr>
-                        <tr>
-                            <td>Three or Four</td>
-                            <td>1 Victory Point</td>
-                        </tr>
-                        <tr>
-                            <td>Five or Six</td>
-                            <td>1 Scribe and 1 Victory Point</td>
-                        </tr>
-                    </table>
                 </p>
+                <table>
+                        <tbody>
+                            <tr>
+                                <td>One or Two</td>
+                                <td>1 Scribe</td>
+                            </tr>
+                            <tr>
+                                <td>Three or Four</td>
+                                <td>1 Victory Point</td>
+                            </tr>
+                            <tr>
+                                <td>Five or Six</td>
+                                <td>1 Scribe and 1 Victory Point</td>
+                            </tr>
+                        </tbody>
+                    </table>
             </div>
         </div>
 </template>

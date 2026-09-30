@@ -23,20 +23,20 @@
                     The <strong>value</strong> of the die determines the <strong>row</strong>, as normal,
                     while the <strong>color</strong> of the die determines the <strong>role</strong> of the
                     Building:
-
-                    <ul>
-                        <li>Yellow = Papyrus workshop</li>
-                        <li>Brown = Bread workshop</li>
-                        <li>White = Limestone quarry</li>
-                        <li>Black = Granite quarry</li>
-                        <li>
-                            Gray = Botankhamun will choose the district that   
-                            contains the fewest Buildings. (If tied for fewest, it
-                            chooses the leftmost district.)
-
-                        </li>
-                    </ul>
                 </p>
+
+                <ul>
+                    <li>Yellow = Papyrus workshop</li>
+                    <li>Brown = Bread workshop</li>
+                    <li>White = Limestone quarry</li>
+                    <li>Black = Granite quarry</li>
+                    <li>
+                        Gray = Botankhamun will choose the district that   
+                        contains the fewest Buildings. (If tied for fewest, it
+                        chooses the leftmost district.)
+
+                    </li>
+                </ul>
                 <p>
                     <strong>If the space is already occupied,</strong> Botankhamun places
                     the Building in the next space to the right, looping around if necessary.
