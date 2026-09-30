@@ -2,6 +2,7 @@
 // import { ref } from 'vue'
 import { store } from '../store.js';
 import Actions from './Actions.vue';
+import ActionTile from './ActionTile.vue';
 
 
 </script>
@@ -109,114 +110,41 @@ import Actions from './Actions.vue';
     <div class="grid">
         <div class="row row-1">
             <div class="column">
-
-                <div class="action-tile"
-                :class="{ 'active-tile': store.pyramid.getCurrentRow() === 0 && store.pyramid.getCurrentCol() === 0 }"
-                
-                >
-                    <img :src="store.pyramid.getPyramid()[0][0].image" 
-                        :title="store.pyramid.getPyramid()[0][0].title"
-                    />
-                </div>
+                <ActionTile :row="0" :column="0" />
             </div>
         </div>
-
         <div class="row row-2">
             <div class="column column--left-edge">
-                
-                <div class="action-tile"
-                :class="{ 'active-tile': store.pyramid.getCurrentRow() === 1 && store.pyramid.getCurrentCol() === 0 }"
-                
-                >
-                    <img :src="store.pyramid.getPyramid()[1][0].image" 
-                        :title="store.pyramid.getPyramid()[1][0].title"
-                    />
-                </div>
+                <ActionTile :row="1" :column="0" />
             </div>
             <div class="column column--right-edge">
-
-                <div class="action-tile"
-                    :class="{ 'active-tile': store.pyramid.getCurrentRow() === 1 && store.pyramid.getCurrentCol() === 1 }"
-                >
-                    <img :src="store.pyramid.getPyramid()[1][1].image" 
-                        :title="store.pyramid.getPyramid()[1][1].title"
-                    />
-                </div>
+                <ActionTile :row="1" :column="1" />
             </div>
         </div>
 
         <div class="row row-3">
             <div class="column column--left-edge">
-                <div 
-                    class="action-tile"
-                    :class="{ 'active-tile': store.pyramid.getCurrentRow() === 2 && store.pyramid.getCurrentCol() === 0 }"
-                >
-                    <img :src="store.pyramid.getPyramid()[2][0].image" 
-                        :title="store.pyramid.getPyramid()[2][0].title"
-                    />
-                </div>
+                <ActionTile :row="2" :column="0" />
             </div>
             <div class="column">
-
-                <div class="action-tile"
-                    :class="{ 'active-tile': store.pyramid.getCurrentRow() === 2 && store.pyramid.getCurrentCol() === 1 }"
-                >
-                    <img :src="store.pyramid.getPyramid()[2][1].image" 
-                        :title="store.pyramid.getPyramid()[2][1].title"
-                    />
-                </div>
+                <ActionTile :row="2" :column="1" />
             </div>
             <div class="column column--right-edge">
-                <div class="action-tile"
-                    :class="{ 'active-tile': store.pyramid.getCurrentRow() === 2 && store.pyramid.getCurrentCol() === 2 }"
-                >
-                    <img :src="store.pyramid.getPyramid()[2][2].image" 
-                        :title="store.pyramid.getPyramid()[2][2].title"
-                    />
-                </div>
+                <ActionTile :row="2" :column="2" />
             </div>
         </div>
         <div class="row row-4">
             <div class="column column--left-edge">
-                <div 
-                    class="action-tile"
-                    :class="{ 'active-tile': store.pyramid.getCurrentRow() === 3 && store.pyramid.getCurrentCol() === 0 }"
-                >
-                     <img :src="store.pyramid.getPyramid()[3][0].image" 
-                            :title="store.pyramid.getPyramid()[3][0].title"
-                            />
-                </div>
+                <ActionTile :row="3" :column="0" />
             </div>
             <div class="column">
-
-                <div class="action-tile"
-                    :class="{ 'active-tile': store.pyramid.getCurrentRow() === 3 && store.pyramid.getCurrentCol() === 1 }" 
-                >
-                    <img :src="store.pyramid.getPyramid()[3][1].image" 
-                        :title="store.pyramid.getPyramid()[3][1].title"
-                    />
-                </div>
+                <ActionTile :row="3" :column="1" />
             </div>
-
             <div class="column">
-
-                <div class="action-tile"
-                :class="{ 'active-tile': store.pyramid.getCurrentRow() === 3 && store.pyramid.getCurrentCol() === 2 }"
-                >
-                    <img :src="store.pyramid.getPyramid()[3][2].image" 
-                        :title="store.pyramid.getPyramid()[3][2].title"
-                    />
-                </div>
+                <ActionTile :row="3" :column="2" />
             </div>
             <div class="column column--right-edge">
-
-                <div class="action-tile"
-                    :class="{ 'active-tile': store.pyramid.getCurrentRow() === 3 && store.pyramid.getCurrentCol() === 3 }"
-                >
-                    <img :src="store.pyramid.getPyramid()[3][3].image" 
-                        :title="store.pyramid.getPyramid()[3][3].title"
-                    />
-                </div>
+                <ActionTile :row="3" :column="3" />
             </div>
         </div>
     </div>
