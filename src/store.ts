@@ -15,6 +15,10 @@ export const store = reactive({
     resetGame() {
         this.turnNumber = 1;
         this.pyramid.reset();
+
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 100);
     },
     takeTurn() {
         this.pyramid.navigate();
@@ -25,6 +29,8 @@ export const store = reactive({
             this.pyramid.reset();
         }
 
-
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 100);
     }
 })

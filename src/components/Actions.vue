@@ -33,8 +33,10 @@
         /* width: 320px; */
         /* background: rgba(255, 255, 255, 0.3); */
         /* padding: 10px; */
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: 'Zilla Slab', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
         /* border: 2px solid #ceac45; */
+
 
         @media (min-width: 700px) {
             width: 520px;
@@ -66,7 +68,8 @@
     }
 
     .action__image img.resources {
-        max-width: 300px;
+        max-width: 60px;
+        min-height: 60px;
     }
 
     .action__headline {

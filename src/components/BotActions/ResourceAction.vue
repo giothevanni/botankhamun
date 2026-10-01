@@ -1,5 +1,12 @@
 <script setup lang="ts">
     import { store } from '../../store.js';
+
+    const dieImgUrl = {
+        'Bread': '/die-brown.png',
+        'Papyrus': '/die-yellow.png',
+        'Granite': '/die-black.png',
+        'Limestone': '/die-yellow.png'
+    };
 </script>
 <template>
     <div class="action-description" id="resourceTiles"
@@ -7,7 +14,14 @@
     >
         <h2 class="action__headline">{{ store.pyramid.getCurrentTile().title.toUpperCase()  }} - RESOURCE ACTION</h2>
         <div class="action__image">
-            <img class="resources" src="/resource-action.png" alt="">
+            <!-- <img class="resources" src="/resource-action.png" alt=""> -->
+            <!-- <img class="resources" :src="dieImgUrl[store.pyramid.getCurrentTile().title as keyof typeof dieImgUrl]" alt=""> -->
+        
+        
+            <img class="resources" v-if="store.pyramid.getCurrentTile().title === 'Bread'" src="/die-brown.png" alt="" />
+            <img class="resources" v-if="store.pyramid.getCurrentTile().title === 'Papyrus'" src="/die-yellow.png" alt="" />
+            <img class="resources" v-if="store.pyramid.getCurrentTile().title === 'Granite'" src="/die-black.png" alt="" />
+            <img class="resources"v-if="store.pyramid.getCurrentTile().title === 'Limestone'" src="/die-white.png" alt="" />
         </div>
         <div class="align-left">
 
