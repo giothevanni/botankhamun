@@ -1,12 +1,5 @@
 <script setup lang="ts">
     import { store } from '../../store.js';
-
-    const dieImgUrl = {
-        'Bread': '/die-brown.png',
-        'Papyrus': '/die-yellow.png',
-        'Granite': '/die-black.png',
-        'Limestone': '/die-yellow.png'
-    };
 </script>
 <template>
     <div class="action-description align-left" id="resourceTiles"
