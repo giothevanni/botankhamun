@@ -150,7 +150,11 @@ import ActionTile from './ActionTile.vue';
     </div>
 
 
-    Turn {{ store.turnNumber }} of 16
+    <p>
+        <strong>
+            Turn {{ store.turnNumber }} of 16
+        </strong>
+    </p>
 
 
 

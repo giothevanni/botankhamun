@@ -9,20 +9,19 @@
     };
 </script>
 <template>
-    <div class="action-description" id="resourceTiles"
+    <div class="action-description align-left" id="resourceTiles"
         :class="{ 'is-hidden': store.pyramid.getCurrentTile().type !== 'resource' }"
     >
-        <h2 class="action__headline">{{ store.pyramid.getCurrentTile().title.toUpperCase()  }} - RESOURCE ACTION</h2>
-        <div class="action__image">
-            <!-- <img class="resources" src="/resource-action.png" alt=""> -->
-            <!-- <img class="resources" :src="dieImgUrl[store.pyramid.getCurrentTile().title as keyof typeof dieImgUrl]" alt=""> -->
-        
-        
-            <img class="resources" v-if="store.pyramid.getCurrentTile().title === 'Bread'" src="/die-brown.png" alt="" />
-            <img class="resources" v-if="store.pyramid.getCurrentTile().title === 'Papyrus'" src="/die-yellow.png" alt="" />
-            <img class="resources" v-if="store.pyramid.getCurrentTile().title === 'Granite'" src="/die-black.png" alt="" />
-            <img class="resources"v-if="store.pyramid.getCurrentTile().title === 'Limestone'" src="/die-white.png" alt="" />
-        </div>
+       
+        <div class="action-header">
+                <div class="action__image">
+                    <img class="resources" v-if="store.pyramid.getCurrentTile().title === 'Bread'" src="/die-brown.png" alt="" />
+                    <img class="resources" v-if="store.pyramid.getCurrentTile().title === 'Papyrus'" src="/die-yellow.png" alt="" />
+                    <img class="resources" v-if="store.pyramid.getCurrentTile().title === 'Granite'" src="/die-black.png" alt="" />
+                    <img class="resources"v-if="store.pyramid.getCurrentTile().title === 'Limestone'" src="/die-white.png" alt="" />
+                </div>
+                <h2 class="action__headline">{{ store.pyramid.getCurrentTile().title.toUpperCase()  }} - RESOURCE ACTION</h2>
+            </div>
         <div class="align-left">
 
 

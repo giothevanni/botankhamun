@@ -62,14 +62,18 @@
         text-align: left;
     }
 
+    .action__image {
+        margin-right: 10px;
+    }
+
     .action__image img {
-        max-width: 80px;
+        max-width: 70px;
 
     }
 
     .action__image img.resources {
-        max-width: 60px;
-        min-height: 60px;
+        max-width: 55px;
+        min-height: 55px;
     }
 
     .action__headline {
