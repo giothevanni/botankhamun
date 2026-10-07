@@ -10,11 +10,31 @@
         max-width: 20px;
         transform: translateY(3px);
     }
+
+    .score-container {
+        font-family: 'Zilla Slab', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        color: #000;
+        padding: 0px 20px 80px;
+
+        @media screen and (min-width: 900px) {
+            padding: 20px 20px 80px;
+            width: 100%;
+            overflow-y: scroll;
+        }
+    }
+
+    .score-container__inner {
+        @media (min-width: 900px) {
+            width: 520px;
+            margin: 0 auto;
+        }
+    }
 </style>
 <template>
 
-    <section id="center">
-        <div class="actions-container maat-phase align-left">
+    <div class="score-container align-left">
+        <div class="score-container__inner">
             <h2>Scoring</h2>
             
             <p>
@@ -155,9 +175,8 @@
                 </p>
             </div>
             
-           
-        </div>
-    </section>
+        </div>   
+    </div>
             
 
 </template>

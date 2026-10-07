@@ -38,18 +38,6 @@ import ActionTile from './ActionTile.vue';
   grid-column: 1 / -1;
 }
 
-    /* .pyramid-row--1 {
-        grid-row: 1fr;
-    }
-
-    .pyramid-row--2 {
-        grid-row: 1fr 1fr;
-    }
-
-    .pyramid-row--3 {
-        grid-row: 1fr 1fr 1fr;
-    } */
-
     .column {
         display: flex;
         justify-content: center;
@@ -103,63 +91,73 @@ import ActionTile from './ActionTile.vue';
         box-sizing: border-box;
         box-shadow: 0 0 6px #0ca6b4;
     }
+
+
+    .turn-number {
+        color: #53401f;
+        font-size: 16px;
+        margin-top: 15px;
+    }
 </style>
 
 <template>
-  <section id="center">
-    <div class="grid">
-        <div class="row row-1">
-            <div class="column">
-                <ActionTile :row="0" :column="0" />
+    <section id="center">
+        <div class="pyramid">
+
+            <div class="grid">
+                <div class="row row-1">
+                    <div class="column">
+                        <ActionTile :row="0" :column="0" />
+                    </div>
+                </div>
+                <div class="row row-2">
+                    <div class="column column--left-edge">
+                        <ActionTile :row="1" :column="0" />
+                    </div>
+                    <div class="column column--right-edge">
+                        <ActionTile :row="1" :column="1" />
+                    </div>
+                </div>
+                
+                <div class="row row-3">
+                    <div class="column column--left-edge">
+                        <ActionTile :row="2" :column="0" />
+                    </div>
+                    <div class="column">
+                        <ActionTile :row="2" :column="1" />
+                    </div>
+                    <div class="column column--right-edge">
+                        <ActionTile :row="2" :column="2" />
+                    </div>
+                </div>
+                <div class="row row-4">
+                    <div class="column column--left-edge">
+                        <ActionTile :row="3" :column="0" />
+                    </div>
+                    <div class="column">
+                        <ActionTile :row="3" :column="1" />
+                    </div>
+                    <div class="column">
+                        <ActionTile :row="3" :column="2" />
+                    </div>
+                    <div class="column column--right-edge">
+                        <ActionTile :row="3" :column="3" />
+                    </div>
+                </div>
             </div>
+            
+            
+            <p class="turn-number">
+                <strong>
+                    Turn {{ store.turnNumber }} of 16
+                </strong>
+            </p>
+            
+            
+            
+            
         </div>
-        <div class="row row-2">
-            <div class="column column--left-edge">
-                <ActionTile :row="1" :column="0" />
-            </div>
-            <div class="column column--right-edge">
-                <ActionTile :row="1" :column="1" />
-            </div>
-        </div>
-
-        <div class="row row-3">
-            <div class="column column--left-edge">
-                <ActionTile :row="2" :column="0" />
-            </div>
-            <div class="column">
-                <ActionTile :row="2" :column="1" />
-            </div>
-            <div class="column column--right-edge">
-                <ActionTile :row="2" :column="2" />
-            </div>
-        </div>
-        <div class="row row-4">
-            <div class="column column--left-edge">
-                <ActionTile :row="3" :column="0" />
-            </div>
-            <div class="column">
-                <ActionTile :row="3" :column="1" />
-            </div>
-            <div class="column">
-                <ActionTile :row="3" :column="2" />
-            </div>
-            <div class="column column--right-edge">
-                <ActionTile :row="3" :column="3" />
-            </div>
-        </div>
-    </div>
-
-
-    <p>
-        <strong>
-            Turn {{ store.turnNumber }} of 16
-        </strong>
-    </p>
-
-
-
-
-    <Actions />
-  </section>
+        <Actions />
+    </section>
 
 </template>
