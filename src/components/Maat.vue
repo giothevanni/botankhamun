@@ -1,5 +1,9 @@
 <script setup lang="ts">
+    import { ref } from 'vue';
     import { store } from '../store.js';
+
+    const coinFlip = ref(Math.round(Math.random() * 100) % 2); // Simulate a coin flip
+
 </script>
 <style>
     .is-highlited {
@@ -30,9 +34,15 @@
             </ul>
             
             <p><strong>Botankhamun's Ankh value is aways 4.</strong></p>
-            <p>
+            <p class="reminder">
                 <strong>If Botankhamun becomes first in Turn Order, </strong>
-                it randomly chooses either Gold or Scribe Destiny card (without receiving the reward).
+
+                <span v-if="coinFlip === 1">
+                    this time  it will choose the <strong>Gold Destiny card</strong> (without receiving the reward).
+                </span>
+                <span v-else>
+                    this time  it will choose the <strong>Scribe Destiny card</strong> (without receiving the reward).
+                </span>
             </p>
             <p>
                 <strong>Otherwise,</strong> you may freely choose any of the four Destiny cards.

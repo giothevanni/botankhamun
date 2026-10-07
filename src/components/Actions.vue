@@ -35,11 +35,16 @@
         /* padding: 10px; */
         font-family: 'Zilla Slab', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 18px;
+        color: #000;
         /* border: 2px solid #ceac45; */
 
 
-        @media (min-width: 700px) {
+        @media (min-width: 900px) {
             width: 520px;
+            height: 65vh;
+            overflow-y: scroll;
+            padding-top: 15px;
+            padding-bottom: 70px;
         }
     }
 

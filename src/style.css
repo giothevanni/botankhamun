@@ -1,6 +1,6 @@
 :root {
-  --text: #333;
-  --text-h: #08060d;
+  --text: #000;
+  --text-h: #000;
   --bg: #fff;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
@@ -12,7 +12,7 @@
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
   --sans: "Cinzel", system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: "Cinzel", system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
@@ -56,8 +56,8 @@ html {
 
 body {
   margin: 0;
-  background: url('/botankhamun-bg2.png'), repeat;
-  background-color: rgba(255, 255, 255, 0.6);
+  background: url('/botankhamun-bg4.png'), repeat;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 h1,
@@ -65,7 +65,7 @@ h2 {
   /* font-family: var(--heading); */
   font-family: "Cinzel", serif;
   font-weight: 700;
-  color: var(--text-h);
+  color: #000;
 }
 
 h1 {
@@ -110,15 +110,24 @@ li {
 }
 
 #app {
-  width: 720px;
+  /* width: 720px; */
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
   border-inline: 1px solid var(--border);
-  min-height: 100svh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  overflow:hidden;
+
+  @media (min-width: 768px) {
+    /* padding: 20px 20px 24px; */
+    width: auto;
+    min-height: auto;
+    height: 100svh;
+    /* flex-direction: row; */
+  }
 }
 
 #center {
@@ -127,12 +136,13 @@ li {
   gap: 25px;
   place-content: center;
   place-items: center;
-  /* flex-grow: 1; */
-  margin-bottom: 70px;
+  padding: 0 20px 80px;
+  gap: 18px;
 
-  @media (max-width: 1024px) {
-    padding: 20px 20px 24px;
-    gap: 18px;
+  @media (min-width: 900px) {
+    flex-direction: row;
+    /* flex-grow: 1; */
+    gap: 40px;
   }
 }
 
