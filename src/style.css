@@ -19,7 +19,8 @@
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
-  background: var(--bg);
+  background: url('/botankhamun-bg4.png'), repeat;
+  background-color: rgba(255, 255, 255, 1);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -56,8 +57,10 @@ html {
 
 body {
   margin: 0;
-  background: url('/botankhamun-bg4.png'), repeat;
-  background-color: rgba(255, 255, 255, 1);
+
+  font-family: 'Zilla Slab', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  color: #000;
 }
 
 h1,
@@ -105,8 +108,12 @@ ol {
   padding-left: 20px;
 }
 
+ul {
+  margin: 0;
+}
+
 li {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #app {
@@ -125,8 +132,11 @@ li {
     /* padding: 20px 20px 24px; */
     width: auto;
     min-height: auto;
-    height: 100svh;
     /* flex-direction: row; */
+  }
+
+  @media (min-width: 900px) {
+    height: 100svh;
   }
 }
 

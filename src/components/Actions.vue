@@ -38,6 +38,9 @@
         color: #000;
         /* border: 2px solid #ceac45; */
 
+        @media (min-width: 700px) {
+            width: 640px;
+        }
 
         @media (min-width: 900px) {
             width: 520px;
