@@ -1,5 +1,14 @@
 <script setup lang="ts">
+
+    import { CAccordion, CAccordionItem, CAccordionHeader, CAccordionBody } from '@coreui/vue';
     import { store } from '../../store.js';
+
+    import BastetDescription from './GodActions/BastetDescription.vue';
+    import HathorDescription from './GodActions/HathorDescription.vue';
+    import HorusDescription from './GodActions/HorusDescription.vue';
+    import OsirisDescription from './GodActions/OsirisDescription.vue';
+    import RaDescription from './GodActions/RaDescription.vue';
+    import ThothDescription from './GodActions/ThothDescription.vue';
 </script>
 <style>
     .reminder {
@@ -8,10 +17,16 @@
         padding: 10px;
         margin: 15px 0;
     }
+
+    .accordion_god-image {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
 </style>
 <template>
     <div class="action-description align-left" id="resourceTiles"
-        :class="{ 'is-hidden': store.pyramid.getCurrentTile().type !== 'resource' }"
+        v-if="store.pyramid.getCurrentTile().type === 'resource'"
     >
        
         <div class="action-header">
@@ -44,11 +59,51 @@
                 
             </p>
             <div class="reminder">
-                <strong>Remember:
-                </strong>
+                <p>
+
+                    <strong>Remember:</strong>
                     After taking a die, Botankhamun performs the God
                     Action corresponding to the section from which the
                     die was taken
+                </p>            
+                <CAccordion>
+                    <CAccordionItem :item-key="1">
+                        <CAccordionHeader><img class="accordion_god-image" src="/horus2.png"/> Horus </CAccordionHeader>
+                        <CAccordionBody>
+                            <HorusDescription />
+                        </CAccordionBody>
+                    </CAccordionItem>
+                    <CAccordionItem :item-key="2">
+                        <CAccordionHeader><img class="accordion_god-image" src="/ra2.png"/>  Ra </CAccordionHeader>
+                        <CAccordionBody>
+                            <RaDescription />
+                        </CAccordionBody>
+                    </CAccordionItem>
+                    <CAccordionItem :item-key="3">
+                        <CAccordionHeader><img class="accordion_god-image" src="/hathor2.png"/> Hathor </CAccordionHeader>
+                        <CAccordionBody>
+                            <HathorDescription />
+                        </CAccordionBody>
+                    </CAccordionItem>
+                    <CAccordionItem :item-key="4">
+                        <CAccordionHeader><img class="accordion_god-image" src="/bastet2.png"/> Bastet </CAccordionHeader>
+                        <CAccordionBody>
+                            <BastetDescription />
+                        </CAccordionBody>
+                    </CAccordionItem>
+                    <CAccordionItem :item-key="5">
+                        <CAccordionHeader><img class="accordion_god-image" src="/thoth2.png"/> Thoth </CAccordionHeader>
+                        <CAccordionBody>
+                            <ThothDescription />
+                        </CAccordionBody>
+                    </CAccordionItem>
+                    <CAccordionItem :item-key="6">
+                        <CAccordionHeader><img class="accordion_god-image" src="/osiris2.png"/> Osiris </CAccordionHeader>
+                        <CAccordionBody>
+                            <OsirisDescription />
+                        </CAccordionBody>
+                    </CAccordionItem>
+                </CAccordion>
             </div>
             <p>
                 <strong>If tied for highest value,</strong> Botankhamun takes a die from

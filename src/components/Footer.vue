@@ -20,6 +20,7 @@ import { store } from '../store.js';
       box-shadow: 0px -2px 10px rgba(50,50,50,0.7);
       border-top: 2px solid #d87f7c;
       left: 0;
+      z-index: 100;
 
     }
 

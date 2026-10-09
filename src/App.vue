@@ -1,5 +1,7 @@
 <script setup lang="ts">
 
+// import '@coreui/coreui/dist/css/coreui.min.css';
+
 import { store } from './store.js';
 import ActionPyramid from './components/ActionPyramid.vue'
 import Maat from './components/Maat.vue';
@@ -12,6 +14,14 @@ import Footer from './components/Footer.vue';
 </script>
 
 <style>
+  .accordion {
+    --cui-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(214, 118, 86, 0.25);
+  }
+
+  /* Core UI Overrides */
+  .accordion-button:not(.collapsed) {
+    background-color: #eddcdb;
+  }
 
     .app-header {
       box-sizing: border-box;

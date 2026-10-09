@@ -7,48 +7,48 @@ import ActionTile from './ActionTile.vue';
 
 </script>
 <style>
-.grid {
+.pyramid-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
 }
 
-.row-1 {
+.pyramid-row-1 {
   grid-column: 1 / -1;
 }
 
-.row-2 {
+.pyramid-row-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   grid-column: 1 / -1;
 }
 
-.row-3 {
+.pyramid-row-3 {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   gap: 10px;
   grid-column: 1 / -1;
 }
 
-.row-4 {
+.pyramid-row-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   grid-column: 1 / -1;
 }
 
-    .column {
+    .pyramid-column {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .column--left-edge {
+    .pyramid-column--left-edge {
         justify-content: right;
     }
 
-    .column--right-edge {
+    .pyramid-column--right-edge {
         justify-content: left;
     }
 
@@ -104,43 +104,43 @@ import ActionTile from './ActionTile.vue';
     <section id="center">
         <div class="pyramid">
 
-            <div class="grid">
-                <div class="row row-1">
-                    <div class="column">
+            <div class="pyramid-grid">
+                <div class="pyramid-row pyramid-row-1">
+                    <div class="pyramid-column">
                         <ActionTile :row="0" :column="0" />
                     </div>
                 </div>
-                <div class="row row-2">
-                    <div class="column column--left-edge">
+                <div class="pyramid-row pyramid-row-2">
+                    <div class="pyramid-column pyramid-column--left-edge">
                         <ActionTile :row="1" :column="0" />
                     </div>
-                    <div class="column column--right-edge">
+                    <div class="pyramid-column pyramid-column--right-edge">
                         <ActionTile :row="1" :column="1" />
                     </div>
                 </div>
                 
-                <div class="row row-3">
-                    <div class="column column--left-edge">
+                <div class="pyramid-row pyramid-row-3">
+                    <div class="pyramid-column pyramid-column--left-edge">
                         <ActionTile :row="2" :column="0" />
                     </div>
-                    <div class="column">
+                    <div class="pyramid-column">
                         <ActionTile :row="2" :column="1" />
                     </div>
-                    <div class="column column--right-edge">
+                    <div class="pyramid-column pyramid-column--right-edge">
                         <ActionTile :row="2" :column="2" />
                     </div>
                 </div>
-                <div class="row row-4">
-                    <div class="column column--left-edge">
+                <div class="pyramid-row pyramid-row-4">
+                    <div class="pyramid-column pyramid-column--left-edge">
                         <ActionTile :row="3" :column="0" />
                     </div>
-                    <div class="column">
+                    <div class="pyramid-column">
                         <ActionTile :row="3" :column="1" />
                     </div>
-                    <div class="column">
+                    <div class="pyramid-column">
                         <ActionTile :row="3" :column="2" />
                     </div>
-                    <div class="column column--right-edge">
+                    <div class="pyramid-column pyramid-column--right-edge">
                         <ActionTile :row="3" :column="3" />
                     </div>
                 </div>
