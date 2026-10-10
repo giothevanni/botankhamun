@@ -2,7 +2,7 @@ import { reactive } from 'vue'
 
 import ActionPyramid from './models/ActionPyramid.ts';
 
-const pyramid = new ActionPyramid();
+
 
 
 
@@ -16,7 +16,12 @@ export const store = reactive({
     maatNumber: 0,
     turnNumber: 1,
     totalTurns: 16,
-    pyramid: pyramid,
+    settings: {
+        isExpansionEnabled: true
+    },
+
+    pyramid: new ActionPyramid(),
+
 
     screen: 'setup',
 
@@ -79,6 +84,8 @@ export const store = reactive({
 
     startGame() {
         this.screen = this.GAME_SCREEN;
+        this.pyramid.setActionsForTheGame(this.settings.isExpansionEnabled);
+        this.pyramid.generatePyramid();
     },
 
     takeTurn() {
