@@ -7,6 +7,8 @@
     import RaAction from './BotActions/RaAction.vue';
     import ThothAction from './BotActions/ThothAction.vue';
     import ResourceAction from './BotActions/ResourceAction.vue';
+    import SethAction from './BotActions/SethAction.vue';
+    import PriestsAndSoldiersAction from './BotActions/PriestsAndSoldiersAction.vue';
 </script>
 <template>
 
@@ -20,6 +22,9 @@
         <RaAction />
         <ThothAction />
         <ResourceAction />
+
+        <SethAction />
+        <PriestsAndSoldiersAction />
 
     </div>
 

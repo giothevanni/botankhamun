@@ -10,8 +10,8 @@ import resourceGraniteImage from '../assets/resource-granite-tile.png';
 import resourceLimestoneImage from '../assets/resource-limestone-tile.png';
 
 // Expansion tiles
-import sethImage from '../assets/seth-tile3.png';
-import priestsAndSoldiersIage from '../assets/priests-and-soldiers-tile3.png';
+import sethImage from '../assets/seth-tile.png';
+import priestsAndSoldiersIage from '../assets/priests-and-soldiers-tile.png';
 
 
 type ActionTile = {
