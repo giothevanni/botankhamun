@@ -1,4 +1,5 @@
 <script setup lang="ts">
+    import BlueRedDiceEvaluation from './BlueRedDiceEvaluation.vue';
 </script>
 <template>
     <div class="align-left">
@@ -15,6 +16,7 @@
             beyond the Population marker,</strong> Botankhamun
             advances the Population marker instead.
         </p>
+        <BlueRedDiceEvaluation />
         <p>
             <strong>Note:</strong>
             <em>

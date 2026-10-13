@@ -1,8 +1,10 @@
 <script setup lang="ts">
     import { store } from '../../../store.js';
+    import BlueRedDiceEvaluation from './BlueRedDiceEvaluation.vue';
 </script>
 <template>
     <div class="align-left">
+        <BlueRedDiceEvaluation />
         <div v-if="store.settings.isExpansionEnabled">
             <p>
                 If Botankhamun can build a Statue for the people on

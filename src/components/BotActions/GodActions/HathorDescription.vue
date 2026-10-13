@@ -1,4 +1,5 @@
 <script setup lang="ts">
+    import BlueRedDiceEvaluation from './BlueRedDiceEvaluation.vue';
 </script>
 <template>
     <div class="align-left">
@@ -7,6 +8,7 @@
             Complex, scoring Victory Points and advancing its
             Population marker as normal.
         </p>
+        <BlueRedDiceEvaluation />
         <p>
             <strong>Note:</strong>
             <em>

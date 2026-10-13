@@ -1,4 +1,5 @@
 <script setup lang="ts">
+    import BlueRedDiceEvaluation from './BlueRedDiceEvaluation.vue';
 </script>
 <template>
 
@@ -7,6 +8,7 @@
             Botankhamun takes 1, 2, or 3 cards, according to the
             value of the die taken.
         </p>
+        <BlueRedDiceEvaluation />
         <p>
             Botankhamun takes cards in the following priority:
             Decrees > Technologies > Blessings. It selects cards

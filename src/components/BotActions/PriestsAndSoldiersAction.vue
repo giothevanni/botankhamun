@@ -18,10 +18,11 @@
         <div class="align-left">
 
             <p>
-                Botankhamun takes the highest-value <strong>red</strong> or <strong>blue</strong> die.
+                Botankhamun takes the highest-value <strong class="label-red-die">red</strong> or <strong class="label-blue-die">blue</strong> die.
                 If there are no red or blue die available,
                 it takes the <strong>highest Pure die</strong> instead. 
             </p>
+
             <div class="reminder">
                 <p>
 

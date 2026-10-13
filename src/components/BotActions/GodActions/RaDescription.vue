@@ -1,5 +1,7 @@
 <script setup lang="ts">
     import { store } from '../../../store.js';
+
+    import BlueRedDiceEvaluation from './BlueRedDiceEvaluation.vue';
 </script>
 <template>
     <div class="align-left">
@@ -16,6 +18,7 @@
             are included when calculating which space is the most
             advantageous for it to build on.
         </div>
+        <BlueRedDiceEvaluation />
         <ul>
             <li>It scores 1 Victory Point per building, regardless
                 of ownership, in the same row or column.</li>

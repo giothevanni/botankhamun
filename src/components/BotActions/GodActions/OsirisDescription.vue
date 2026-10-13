@@ -1,4 +1,6 @@
 <script setup lang="ts">
+    import { store } from '../../../store.js';
+    import BlueRedDiceEvaluation from './BlueRedDiceEvaluation.vue';
 </script>
 <template>
     <div class="align-left">
@@ -11,17 +13,23 @@
             while the <strong>color</strong> of the die determines the <strong>role</strong> of the
             Building:
         </p>
-
+        
+        <BlueRedDiceEvaluation />
+        
         <ul>
             <li>Yellow = Papyrus workshop</li>
             <li>Brown = Bread workshop</li>
             <li>White = Limestone quarry</li>
             <li>Black = Granite quarry</li>
-            <li>
+            <li v-if="store.settings.isExpansionEnabled">
+                Gray / Blue / Red = Botankhamun will choose the district that   
+                contains the fewest Buildings. (If tied for fewest, it
+                chooses the leftmost district.)
+            </li>
+            <li v-else>
                 Gray = Botankhamun will choose the district that   
                 contains the fewest Buildings. (If tied for fewest, it
                 chooses the leftmost district.)
-
             </li>
         </ul>
         <p>
