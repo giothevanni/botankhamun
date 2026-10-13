@@ -34,19 +34,45 @@
             </ul>
             
             <p><strong>Botankhamun's Ankh value is aways 4.</strong></p>
-            <p class="reminder">
-                <strong>If Botankhamun becomes first in Turn Order, </strong>
 
-                <span v-if="coinFlip === 1">
-                    this time  it will choose the <strong>Gold Destiny card</strong> (without receiving the reward).
-                </span>
-                <span v-else>
-                    this time  it will choose the <strong>Scribe Destiny card</strong> (without receiving the reward).
-                </span>
-            </p>
-            <p>
-                <strong>Otherwise,</strong> you may freely choose any of the four Destiny cards.
-            </p>
+            <div v-if="store.settings.isExpansionEnabled">
+                <p class="reminder">
+                    <strong>If Botankhamun is first in Turn Order,</strong> it picks
+                    the lowest Ankh valued Destiny card that corresponds
+                    to an Artifact (making that Artifact unavailable to you), or it
+                    picks 
+                    <span v-if="coinFlip === 1">
+                        the <strong>Gold Destiny card</strong> 
+                    </span>
+                    <span v-else>
+                        the <strong>Scribe Destiny card</strong>
+                    </span>
+                    if no Artifact remains. Botankhamun never takes
+                    an Artifact itself, only a corresponding Destiny card.
+                </p>
+                <p>
+                    <strong>Otherwise</strong> (including in the last step of setup), you may
+                    choose any of the four Destiny cards or available Artifacts
+                    (paying its Priest cost) together with their corresponding
+                    Destiny cards. 
+                </p>
+            </div>
+            <div v-else>
+                <p class="reminder">
+                    <strong>If Botankhamun becomes first in Turn Order, </strong>
+    
+                    <span v-if="coinFlip === 1">
+                        this time  it will choose the <strong>Gold Destiny card</strong> (without receiving the reward).
+                    </span>
+                    <span v-else>
+                        this time  it will choose the <strong>Scribe Destiny card</strong> (without receiving the reward).
+                    </span>
+                </p>
+                <p>
+                    <strong>Otherwise,</strong> you may freely choose any of the four Destiny cards.
+                </p>
+            </div>
+
         </div>
     </section>
 

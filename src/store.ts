@@ -17,7 +17,7 @@ export const store = reactive({
     turnNumber: 1,
     totalTurns: 16,
     settings: {
-        isExpansionEnabled: true
+        isExpansionEnabled: false
     },
 
     pyramid: new ActionPyramid(),

@@ -36,12 +36,15 @@
     <div class="score-container align-left">
         <div class="score-container__inner">
             <h2>Scoring</h2>
-            
             <p>
                 Botankhamun scores in the following areas according
                 to the normal rules:
             </p>
 
+            <p class="reminder" v-if="store.settings.isExpansionEnabled">
+                Botankhamun scores Victory Points for its Buildings on
+                the Seth board the same way as you do. 
+            </p>
             <ol>
                 <li>
                     <strong>For each of the 4 Resource districts in the

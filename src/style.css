@@ -298,3 +298,148 @@ li {
 .collapse:not(.show) {
   display: none;
 }
+
+.form-check .form-check-input {
+  float: inline-start;
+  -webkit-margin-start: -1.5em;
+  margin-inline-start: -1.5em;
+}
+
+.form-check-reverse {
+  padding-inline: 0 1.5em;
+  text-align: end;
+}
+.form-check-reverse .form-check-input {
+  float: inline-end;
+  margin-inline: 0 -1.5em;
+}
+
+.form-check-input {
+  --cui-form-check-bg: var(--cui-body-bg);
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.25em;
+  vertical-align: top;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: var(--cui-form-check-bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 2px solid #aaa;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+  print-color-adjust: exact;
+}
+.form-check-input[type=checkbox] {
+  border-radius: 0.25em;
+}
+.form-check-input[type=radio] {
+  border-radius: 50%;
+}
+.form-check-input:active {
+  filter: brightness(90%);
+}
+.form-check-input:focus {
+  border-color: rgb(234, 179, 170);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(214, 86, 86, 0.25);
+}
+.form-check-input:checked {
+  background-color: #b94c48;
+  border-color: var(--cui-form-check-input-checked-border-color, var(--cui-primary));
+}
+.form-check-input:checked[type=checkbox] {
+  --cui-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='rgba%28255, 255, 255, 0.87%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+}
+.form-check-input:checked[type=radio] {
+  --cui-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='rgba%28255, 255, 255, 0.87%29'/%3e%3c/svg%3e");
+}
+.form-check-input[type=checkbox]:indeterminate {
+  background-color: var(--cui-primary);
+  border-color: var(--cui-primary);
+  --cui-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='rgba%28255, 255, 255, 0.87%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
+}
+.form-check-input:disabled {
+  pointer-events: none;
+  filter: none;
+  opacity: 0.5;
+}
+.form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.form-check-label {
+  color: var(--cui-form-check-label-color, );
+}
+
+
+
+
+.form-switch {
+  -webkit-padding-start: 2.5em;
+  padding-inline-start: 2.5em;
+}
+.form-switch .form-check-input {
+  --cui-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%288, 10, 12, 0.25%29'/%3e%3c/svg%3e");
+  width: 2em;
+  -webkit-margin-start: -2.5em;
+  margin-inline-start: -2.5em;
+  background-image: var(--cui-form-switch-bg);
+  background-position: left center;
+  border-radius: 2em;
+  transition: background-position 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .form-switch .form-check-input {
+    transition: none;
+  }
+}
+.form-switch .form-check-input:focus {
+  /* Focus Color */
+  /* --cui-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ACABEB'/%3e%3c/svg%3e"); */
+}
+.form-switch .form-check-input:checked {
+  background-position: right center;
+  --cui-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255, 0.87%29'/%3e%3c/svg%3e");
+}
+.form-switch.form-check-reverse {
+  padding-inline: 0 2.5em;
+}
+.form-switch.form-check-reverse .form-check-input {
+  margin-inline: 0 -2.5em;
+}
+
+.form-switch-lg {
+  min-height: 1.25em;
+  -webkit-padding-start: 3em;
+  padding-inline-start: 3em;
+}
+.form-switch-lg .form-check-input {
+  width: 2.5em;
+  height: 1.25em;
+  -webkit-margin-start: -3em;
+  margin-inline-start: -3em;
+}
+.form-switch-lg .form-check-label {
+  padding-top: calc((1.25em - 1rem) / 2);
+}
+
+.form-switch-xl {
+  min-height: 1.5em;
+  -webkit-padding-start: 3.5em;
+  padding-inline-start: 3.5em;
+}
+.form-switch-xl .form-check-input {
+  width: 3em;
+  height: 1.5em;
+  -webkit-margin-start: -3.5em;
+  margin-inline-start: -3.5em;
+}
+.form-switch-xl .form-check-label {
+  padding-top: calc((1.5em - 1rem) / 2);
+}

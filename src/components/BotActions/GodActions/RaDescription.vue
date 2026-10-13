@@ -1,14 +1,21 @@
 <script setup lang="ts">
+    import { store } from '../../../store.js';
 </script>
 <template>
     <div class="align-left">
+
         <p>                
             Botankhamun raises one Pillar within the Temple
             Complex, choosing the Pillar tile that corresponds to its die value.
             Whithout changing the tile's orientation, Botankhamun places the tile 
             on an empty space within the Temple Complex where it scores most points:
         </p>
-
+        <div class="reminder" v-if="store.settings.isExpansionEnabled">
+            If Botankhamun builds a Pillar on top of a Conquest
+            tile, it scores <strong>2 additional Victory Points.</strong> These points
+            are included when calculating which space is the most
+            advantageous for it to build on.
+        </div>
         <ul>
             <li>It scores 1 Victory Point per building, regardless
                 of ownership, in the same row or column.</li>
