@@ -127,10 +127,12 @@
                             Botankhamun always starts the game first in Turn Order.
                         </li>
                         <li>
-                            Botankhamun chooses 
+                            Botankhamun takes 
                             <span v-if="coinFlip === 1">the <strong>Gold Destiny card</strong></span>
                             <span v-else>the <strong>Scribe Destiny card</strong></span>
                             (without receiving the reward).
+                            <br>
+                            The card was chosen randomly by the app between the two options: Gold / Scribe.
                         </li>
                     </ul>
                 </li>

@@ -77,7 +77,7 @@ import { store } from '../store.js';
       <button 
         v-if="store.turnNumber < 16 && store.screen === store.GAME_SCREEN && store.showMaatButton() === false"
         type="button" class="counter" @click="store.takeTurn()">
-        Take turn
+        Next turn
       </button>
       <button 
         v-if="store.showMaatButton()"

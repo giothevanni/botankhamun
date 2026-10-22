@@ -40,7 +40,8 @@
                     <strong>If Botankhamun is first in Turn Order,</strong> it picks
                     the lowest Ankh valued Destiny card that corresponds
                     to an Artifact (making that Artifact unavailable to you), or it
-                    picks 
+                    takes 
+
                     <span v-if="coinFlip === 1">
                         the <strong>Gold Destiny card</strong> 
                     </span>
@@ -49,6 +50,8 @@
                     </span>
                     if no Artifact remains. Botankhamun never takes
                     an Artifact itself, only a corresponding Destiny card.
+                    <br>
+                    The card was chosen randomly by the app between the two options: Gold / Scribe.
                 </p>
                 <p>
                     <strong>Otherwise</strong> (including in the last step of setup), you may
@@ -60,13 +63,15 @@
             <div v-else>
                 <p class="reminder">
                     <strong>If Botankhamun becomes first in Turn Order, </strong>
-    
+                    it takes the 
                     <span v-if="coinFlip === 1">
-                        this time  it will choose the <strong>Gold Destiny card</strong> (without receiving the reward).
+                        <strong>Gold Destiny card</strong> (without receiving the reward).
                     </span>
                     <span v-else>
-                        this time  it will choose the <strong>Scribe Destiny card</strong> (without receiving the reward).
+                        <strong>Scribe Destiny card</strong> (without receiving the reward).
                     </span>
+                    <br>
+                    The card was chosen randomly by the app between the two options: Gold / Scribe.
                 </p>
                 <p>
                     <strong>Otherwise,</strong> you may freely choose any of the four Destiny cards.
