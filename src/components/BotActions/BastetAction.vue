@@ -1,6 +1,7 @@
 <script setup lang="ts">
     import { store } from '../../store.js';
     import BastetDescription from './GodActions/BastetDescription.vue';
+    import NoDiceReminder from '../NoDiceReminder.vue';
 </script>
 
 <template>
@@ -13,7 +14,7 @@
                 </div>
                 <h2 class="action__headline">BASTET - GOD ACTION</h2>
             </div>
-
+            <NoDiceReminder />
             <BastetDescription />
         </div>
 </template>

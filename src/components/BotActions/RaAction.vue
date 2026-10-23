@@ -2,6 +2,7 @@
     import { store } from '../../store.js';
 
     import RaDescription from './GodActions/RaDescription.vue';
+    import NoDiceReminder from '../NoDiceReminder.vue';
 </script>
 
 <template>
@@ -14,7 +15,7 @@
                 </div>
                 <h2 class="action__headline">RA - GOD ACTION</h2>
             </div>
-
+            <NoDiceReminder />
 
             <RaDescription />
         </div>

@@ -1,6 +1,7 @@
 <script setup lang="ts">
     import { store } from '../../store.js';
     import HathorDescription from './GodActions/HathorDescription.vue';
+    import NoDiceReminder from '../NoDiceReminder.vue';
 </script>
 
 <template>
@@ -13,7 +14,7 @@
                 </div>
                 <h2 class="action__headline">HATHOR - GOD ACTION</h2>
             </div>
-
+            <NoDiceReminder />
             <HathorDescription />
         </div>
 </template>

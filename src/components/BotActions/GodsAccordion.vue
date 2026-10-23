@@ -60,4 +60,4 @@
             </CAccordionItem>
         </CAccordion>
     </div>
-    </template>
+</template>

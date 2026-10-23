@@ -2,6 +2,7 @@
     import { store } from '../../store.js';
 
     import HorusDescription from './GodActions/HorusDescription.vue';
+    import NoDiceReminder from '../NoDiceReminder.vue';
 </script>
 
 <template>
@@ -14,7 +15,7 @@
                 </div>
                 <h2 class="action__headline">HORUS - GOD ACTION</h2>
             </div>
-
+            <NoDiceReminder />
             <HorusDescription />
         </div>
 </template>

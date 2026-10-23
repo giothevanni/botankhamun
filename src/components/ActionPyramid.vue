@@ -98,6 +98,35 @@ import ActionTile from './ActionTile.vue';
         font-size: 16px;
         margin-top: 15px;
     }
+    
+    .horus-bonus-table {
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+    .horus-bonus-table,
+    .horus-bonus-table td {
+        border: 1px solid #333;
+        border-collapse: collapse;
+        padding: 4px 16px;
+        font-size: 14px;
+    }
+
+    .horus-bonus-table__img {
+        max-width: 22px;
+        margin: 0 3px;
+        transform: translateY(2px);
+    }
+
+    .horus-bonus-table__img-seth {
+        max-width: 34px;
+        margin: 0;
+        transform: translateY(5px);
+    }
+
+    .u-text-s {
+        font-size: 14px;
+    }
 </style>
 
 <template>
@@ -152,9 +181,32 @@ import ActionTile from './ActionTile.vue';
                     Turn {{ store.turnNumber }} of 16
                 </strong>
             </p>
+
+            <div class="u-spacer"></div>
+
+            <strong>Botankhamun's Horus Bonus Reminder</strong><br>
+            <span class="u-text-s">only triggered on <strong>God actions</strong> by either player</span>
             
             
-            
+            <table class="horus-bonus-table">
+                <tbody>
+                    <tr>
+                        <td><img class="horus-bonus-table__img" src="/die-1-small.png" title="One"> or <img class="horus-bonus-table__img" src="/die-2-small.png" title="Two"></td>
+                        <td>1 Scribe</td>
+                    </tr>
+                    <tr>
+                        <td><img class="horus-bonus-table__img" src="/die-3-small.png" title="Three"> or <img class="horus-bonus-table__img" src="/die-4-small.png" title="Four">
+                            <span v-if="store.settings.isExpansionEnabled"> or <img class="horus-bonus-table__img-seth" src="/seth.png" title="Seth"></span>
+                        </td>
+                        <td>1 Victory Point</td>
+                    </tr>
+                    <tr>
+                        <td><img class="horus-bonus-table__img" src="/die-5-small.png" title="Five"> or <img class="horus-bonus-table__img" src="/die-6-small.png" title="Six"></td>
+                        <td>1 Scribe and 1 Victory Point</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="u-spacer"></div>
             
         </div>
         <Actions />
